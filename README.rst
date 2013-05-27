@@ -12,7 +12,11 @@ Installation
 
     sage -sh -c "easy_install https://github.com/ipython/ipython/archive/0d4706f.zip"
 
-5. Install the latest sagecell spkg at http://sage.math.washington.edu/home/jason/sagecell-spkg/ (replace ``<filename>`` below with the name of the current spkg)::
+5. Run the following line to make sure ZeroMQ does not give errors when installing sagecell:
+
+    export LIBZMQ_EXTRA_CXXFLAGS="${LIBZMQ_EXTRA_CXXFLAGS} -Wno-long-long " 
+
+6. Install the latest sagecell spkg at http://sage.math.washington.edu/home/jason/sagecell-spkg/ (replace ``<filename>`` below with the name of the current spkg)::
 
     sage -i http://sage.math.washington.edu/home/jason/sagecell-spkg/<filename>.spkg
 
